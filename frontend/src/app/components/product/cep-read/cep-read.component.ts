@@ -10,32 +10,30 @@ import { ProductService } from './../product.service';
   styleUrls: ['./cep-read.component.css']
 })
 export class CepReadComponent implements OnInit {
-  cep : Cep[] 
-  Viacep : Cep
+
+ 
   DoViaCep : Cep
 
-  displayedColumns = ['cep','bairro']; 
+
 
     constructor(private router : Router, private productService : ProductService, private route : ActivatedRoute) { 
-      this.cep = [{}]
-      this.Viacep = {}
+ 
+ 
      this.DoViaCep = {}
-     console.log(this.DoViaCep)
-     console.log(this.Viacep)
+ 
    
     }
   
     ngOnInit(): void {
       
-      this.productService.readByAllCep().subscribe( cep => {
-       return  this.cep = cep
-        
-      })
       const id = ""+ this.route.snapshot.paramMap.get("cep");
-      this.productService.readByCep(id).subscribe(cep2 => {
-        this.DoViaCep = cep2
+      this.productService.readByCep(id).subscribe(cep => {
+        this.DoViaCep = cep
       
-      })   
+      })
+
+     
+   
     }
   
   }

@@ -24,6 +24,10 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
+  getRua(cep:string) {
+    this.router.navigate(['cep/read/logradouro/', cep]);    
+  }
 
   getCep(cep:string) {
     this.router.navigate(['cep/read/', cep]);    

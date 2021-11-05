@@ -21,15 +21,11 @@
  </mat-card-title>
     <mat-card-subtitle class="subtitle">
 
-        <h2>Digite A Rua que gostaria de pesquisar</h2>
+        <h2>Digite A Rua que gostaria de pesquisar em "Porto Alegre"</h2>
         
-        <p><input type="text" id="cep" name="cep" #cep></p>
-
-
-
+        <p><input type="text" id="cep" name="cep" #cep></p>        
         
-        
-        <button type="button" (click)="getCep(cep.value)">Consultar</button>
+        <button type="button" (click)="getRua(cep.value)">Consultar</button>
         
 
     </mat-card-subtitle>

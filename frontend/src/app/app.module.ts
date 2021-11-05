@@ -33,6 +33,7 @@ import localePt from '@angular/common/locales/pt';
 import {registerLocaleData} from '@angular/common';
 
 import { CepReadComponent } from './components/product/cep-read/cep-read.component';
+import { CepReadLogradouroComponent } from './components/product/cep-read-logradouro/cep-read-logradouro.component';
 
 registerLocaleData(localePt);
 
@@ -44,7 +45,8 @@ registerLocaleData(localePt);
     NavComponent,
     HomeComponent,
     RedDirective,
-    CepReadComponent 
+    CepReadComponent,
+    CepReadLogradouroComponent 
 
   ],
   imports: [

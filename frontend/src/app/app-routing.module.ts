@@ -5,6 +5,7 @@ import {HomeComponent} from './views/home/home.component';
 
 
 import { CepReadComponent } from './components/product/cep-read/cep-read.component';
+import { CepReadLogradouroComponent } from './components/product/cep-read-logradouro/cep-read-logradouro.component';
 
 const routes: Routes = [
   {
@@ -18,7 +19,12 @@ const routes: Routes = [
   {
   path: "cep/read/:cep",
   component : CepReadComponent
-}
+},
+{
+  path: "cep/read/logradouro/:cep",
+  component : CepReadLogradouroComponent
+},
+
 
 ];
 
