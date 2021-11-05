@@ -1,8 +1,11 @@
 # Como Estartar o projeto #
 
-Você precisará ter o _Node.js_ instalado no seu computador, bem como o framework _Angular_ e um _terminal_(BASH, CDM, PowerShell etc..) da sua preferência.
-Inicialmente, o programa está dividido em duas pastas, do front e do back e você precisará estartar
-dois servidores para ver a total funcionalidade do sistema.
+Você precisará ter o _Node.js_ instalado no seu computador, bem como o framework _Angular_ e um _terminal_(BASH, CDM, PowerShell etc..)  
+da sua preferência.
+Inicialmente, o programa está dividido em duas pastas, do front e do back e você precisará estartar ao menos o FrontEnd.  
+O Back foi usado somente para teste e desenvolvimento.  
+O Front irá se conectar diretamente na base de dados do ViaCep.
+
  
 
 ## No Frontend ##
@@ -17,14 +20,15 @@ você poderá visualizar e utilizar o site via browser.
 
 ## No backend ##
 
-Entre na pasta **_backend_** e no terminal de o seguinte comando:
+Entre na pasta **_backend_** e no terminal de o seguinte comando caso queira um servidor local de backend:
 
 **npm start**
 
 Será iniciado um "servidor de backend" na porta: **http://localhost:3001**
 Agora você pode fazer **_requisições HTTP_** na rota:
 
-  ### http://localhost:3001/cep ####
+  ### http://localhost:3001/Cep ####  
+ 
  
 
 ### Versões dos softwares utilizadas neste projeto ###
