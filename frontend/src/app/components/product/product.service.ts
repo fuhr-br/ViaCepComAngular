@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import {MatSnackBar} from '@angular/material/snack-bar'; 
-import { EMPTY, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 
 
 import {Cep } from './cep.model'
@@ -15,17 +14,8 @@ ViaCepUrlOne = "https://viacep.com.br/ws/"
 prucarCep = "https://viacep.com.br/ws/91150000/json/"
 
 
-  constructor(private snackBar : MatSnackBar,
-              private http : HttpClient) { }
+  constructor(private http : HttpClient) { }
 
-  showMessage(msg: string): void{
-    this.snackBar.open(msg, 'X', {
-      duration: 3000,
-      horizontalPosition: "right",
-      verticalPosition: "top",
-      panelClass: " Base de Dados Acessada!"
-    } )
-  }
 
     readByAllCep(logradouro: string) : Observable<Cep[]>{
       const url = `${this.viaCepUrlLogradouro}/${logradouro}/json/` 
