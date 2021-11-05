@@ -12,7 +12,7 @@ export class CepReadLogradouroComponent implements OnInit {
   cep : Cep[] 
 
 
-  displayedColumns = ['cep','bairro']; 
+  displayedColumns = ['cep','rua', 'bairro']; 
   constructor( private productService : ProductService, private route : ActivatedRoute) { 
     this.cep = [{}]
 
