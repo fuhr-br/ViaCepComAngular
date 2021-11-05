@@ -10,7 +10,7 @@ import {Cep } from './cep.model'
 })
 export class ProductService {
 
-viaCepUrl = "https://viacep.com.br/ws/RS/Porto%20Alegre/Domingos/json/"
+viaCepUrlLogradouro = "https://viacep.com.br/ws/RS/Porto%20Alegre"
 ViaCepUrlOne = "https://viacep.com.br/ws/"
 prucarCep = "https://viacep.com.br/ws/91150000/json/"
 
@@ -27,8 +27,9 @@ prucarCep = "https://viacep.com.br/ws/91150000/json/"
     } )
   }
 
-    readByAllCep() : Observable<Cep[]>{
-        return this.http.get<Cep[]>(this.viaCepUrl)
+    readByAllCep(logradouro: string) : Observable<Cep[]>{
+      const url = `${this.viaCepUrlLogradouro}/${logradouro}/json/` 
+        return this.http.get<Cep[]>(url)
       
     }
 
@@ -36,7 +37,7 @@ prucarCep = "https://viacep.com.br/ws/91150000/json/"
       return this.http.get<Cep>(this.prucarCep)
     
   }
-
+ 
   readByCep(cep: string) : Observable<Cep>{
     const url = `${this.ViaCepUrlOne}${cep}/json/`  
       return this.http.get<Cep>(url)

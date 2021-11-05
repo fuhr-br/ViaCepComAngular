@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { Cep } from '../cep.model';
 import { ProductService } from '../product.service';
 
@@ -13,14 +13,15 @@ export class CepReadLogradouroComponent implements OnInit {
 
 
   displayedColumns = ['cep','bairro']; 
-  constructor(private router : Router, private productService : ProductService, private route : ActivatedRoute) { 
+  constructor( private productService : ProductService, private route : ActivatedRoute) { 
     this.cep = [{}]
 
   }
 
   ngOnInit(): void {
 
-    this.productService.readByAllCep().subscribe( cep => {
+    const logradouro = ""+ this.route.snapshot.paramMap.get("cep");
+    this.productService.readByAllCep(logradouro).subscribe( cep => {
       this.cep = cep
       
     })

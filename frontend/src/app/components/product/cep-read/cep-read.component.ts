@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { Cep } from './../cep.model';
 
 import { ProductService } from './../product.service';
@@ -14,9 +14,7 @@ export class CepReadComponent implements OnInit {
  
   DoViaCep : Cep
 
-
-
-    constructor(private router : Router, private productService : ProductService, private route : ActivatedRoute) { 
+    constructor( private productService : ProductService, private route : ActivatedRoute) { 
  
  
      this.DoViaCep = {}
@@ -26,14 +24,12 @@ export class CepReadComponent implements OnInit {
   
     ngOnInit(): void {
       
-      const id = ""+ this.route.snapshot.paramMap.get("cep");
-      this.productService.readByCep(id).subscribe(cep => {
+      const cep = ""+ this.route.snapshot.paramMap.get("cep");
+      this.productService.readByCep(cep).subscribe(cep => {
         this.DoViaCep = cep
       
       })
 
-     
-   
     }
   
   }

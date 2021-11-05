@@ -15,17 +15,17 @@
 
 </mat-card>
 
-<mat-card class="home mat-elevation-z3">
+<mat-card class="home mat-elevation-z3 ">
     <mat-card-title class="title"> 
        Busca por Rua
  </mat-card-title>
     <mat-card-subtitle class="subtitle">
 
-        <h2>Digite A Rua que gostaria de pesquisar em "Porto Alegre"</h2>
+        <h2>Digite a Rua que gostaria de pesquisar em "Porto Alegre"</h2>
         
-        <p><input type="text" id="cep" name="cep" #cep></p>        
+        <p><input type="text" id="log" name="log" #log></p>        
         
-        <button type="button" (click)="getRua(cep.value)">Consultar</button>
+        <button type="button" (click)="getRua(log.value)">Consultar</button>
         
 
     </mat-card-subtitle>
