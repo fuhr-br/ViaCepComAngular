@@ -28,17 +28,14 @@ export class CepReadComponent implements OnInit {
     ngOnInit(): void {
       
       this.productService.readByAllCep().subscribe( cep => {
-        this.cep = cep
+       return  this.cep = cep
         
       })
       const id = ""+ this.route.snapshot.paramMap.get("cep");
       this.productService.readByCep(id).subscribe(cep2 => {
         this.DoViaCep = cep2
       
-      })
-
-     
-   
+      })   
     }
   
   }
